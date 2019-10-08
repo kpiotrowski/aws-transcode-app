@@ -19,7 +19,10 @@ table_name = os.getenv('TRANSCODE_TABLE')
 etClient = boto3.client('elastictranscoder')
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table(table_name)
+
+
+def _get_table():
+    return dynamodb.Table(table_name)
 
 
 def handler(event, context):
@@ -57,7 +60,7 @@ def add_to_dynamodb(input_key, output_key, transcoder_job):
         'date': str(datetime.datetime.now()),
         'transcoder_job': transcoder_job,
     }
-    table.put_item(
+    _get_table().put_item(
         Item=data
     )
     return data['id']

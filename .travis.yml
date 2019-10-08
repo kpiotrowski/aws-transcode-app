@@ -3,3 +3,4 @@ language: python
 script:
  - pip install pipenv
  - pipenv install --system --dev
+ - nosetests

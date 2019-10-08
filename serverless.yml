@@ -139,10 +139,10 @@ resources:
       Type: AWS::SNS::Topic
       Properties:
         DisplayName: 'Notify Topic'
-        Subscription:
-          -
-            Endpoint: "+48000000000"
-            Protocol: "sms"
+        # Subscription:
+        #   -
+        #     Endpoint: "+48000000000"
+        #     Protocol: "sms"
 
     TranscoderErrorTopic:
       Type: AWS::SNS::Topic

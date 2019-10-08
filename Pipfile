@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 boto3 = "*"
 aws-xray-sdk = "*"
+nose = "*"
 
 [requires]
 python_version = "3.7"
