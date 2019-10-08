@@ -2,7 +2,9 @@
   "name": "aws-transcode-app",
   "description": "",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "fs-extra": "^8.1.0"
+  },
   "devDependencies": {
     "serverless-python-requirements": "^5.0.0"
   }
