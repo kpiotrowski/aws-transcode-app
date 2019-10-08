@@ -1,4 +1,4 @@
-language: python: 3.7
+language: python
 
 script:
  - pip install pipenv
@@ -9,3 +9,4 @@ script:
  - npm i serverless@1.39.1 -g
  - npm i
  - serverless deploy -v --region $REGION
+
