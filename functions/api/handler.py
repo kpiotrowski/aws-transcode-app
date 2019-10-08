@@ -16,9 +16,9 @@ transcode_pipeline = os.getenv('TRANSCODE_PIPELINE')
 table_name = os.getenv('TRANSCODE_TABLE')
 
 
-etClient = boto3.client('elastictranscoder')
+etClient = boto3.client('elastictranscoder', region_name="eu-west-1")
 
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb', region_name="eu-west-1")
 
 
 def _get_table():
