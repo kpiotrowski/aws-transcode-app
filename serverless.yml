@@ -51,7 +51,6 @@ functions:
       - http:
           method: POST
           path: jobs
-          authorizer: aws_iam
 
   finisher:
     handler: functions/share/handler.handler
