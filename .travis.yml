@@ -3,6 +3,7 @@ language: python
 script:
  - pip install pipenv
  - pipenv install --system --dev
+ - pipenv shell
  - nosetests
  - wget -qO- https://deb.nodesource.com/setup_10.x | bash -
  - apt-get install -y nodejs jq
