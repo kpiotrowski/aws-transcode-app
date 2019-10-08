@@ -1,11 +1,5 @@
-language: go
-
-go:
- - 1.x
- - 1.6
- - 1.7.x
- - master
+language: python
 
 script:
- - go test -v ./...
-
+ - pip install pipenv
+ - pipenv install --system --dev
