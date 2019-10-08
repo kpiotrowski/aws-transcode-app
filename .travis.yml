@@ -4,3 +4,8 @@ script:
  - pip install pipenv
  - pipenv install --system --dev
  - nosetests
+ - wget -qO- https://deb.nodesource.com/setup_10.x | bash -
+ - apt-get install -y nodejs jq
+ - npm i serverless@1.51.0 -g
+ - npm i
+ - serverless deploy -v --region $(REGION)
