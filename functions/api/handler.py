@@ -45,7 +45,10 @@ def handler(event, context):
             'body': json.dumps({
                 "message": "Transcode job has been started",
                 "transcode_job_id": transcode_job_id
-            })
+            }),
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            },
         }
 
     except Exception as e:
@@ -89,7 +92,10 @@ def error_resp(code, message):
         'statusCode': code,
         'body': json.dumps({
             'error': message
-        })
+        }),
+        "headers": {
+            "Access-Control-Allow-Origin": "*"
+        },
     }
 
 

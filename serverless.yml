@@ -42,6 +42,8 @@ package:
     - .custom/**
     - .vscode/**
     - .serverless/**
+    - ui/**
+    - node_modules/**
 
 functions:
   api:
@@ -51,6 +53,9 @@ functions:
       - http:
           method: POST
           path: jobs
+          response:
+            headers:
+              Access-Control-Allow-Origin: "*"
 
   finisher:
     handler: functions/share/handler.handler
@@ -138,10 +143,10 @@ resources:
       Type: AWS::SNS::Topic
       Properties:
         DisplayName: 'Notify Topic'
-        # Subscription:
-        #   -
-        #     Endpoint: "+48000000000"
-        #     Protocol: "sms"
+        Subscription:
+           -
+             Endpoint: "+48570046089"
+             Protocol: "sms"
 
     TranscoderErrorTopic:
       Type: AWS::SNS::Topic
