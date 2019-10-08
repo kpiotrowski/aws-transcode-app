@@ -8,4 +8,4 @@ script:
  - apt-get install -y nodejs jq
  - npm i serverless@1.51.0 -g
  - npm i
- - serverless deploy -v --region $(REGION)
+ - serverless deploy -v --region $REGION
